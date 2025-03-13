@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tycoon Tech Enterprice.</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Our Brand</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle">&#9776;</div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Build Your Dream Website</h1>
+            <p>Professional websites for all your business needs.</p>
+            <a href="#services" class="btn">Get Started</a>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="service-container">
+            <div class="service-box">
+                <img src="image/webdev.jpg" alt="Web Design">
+                <h3>Web Design</h3>
+                <p>Modern, responsive, and high-quality designs.</p>
+            </div>
+            <div class="service-box">
+                <img src="image/pg.jpg" alt="SEO Optimization">
+                <h3>SEO Optimization</h3>
+                <p>Rank higher on search engines with ease.</p>
+            </div>
+            <div class="service-box">
+                <img src="image/ecomerce.jpg" alt="E-commerce">
+                <h3>E-Commerce</h3>
+                <p>Sell products online with a professional store.</p>
+            </div>
+            <div class="service-box">
+                <img src="image/port.jpg" alt="Web Design">
+                <h3>Portfolio Web</h3>
+                <p>Modern, responsive, and high-quality designs.</p>
+            </div>
+            <div class="service-box">
+                <img src="image/blog.jpg" alt="Web Design">
+                <h3>Blogger Website</h3>
+                <p>Modern, responsive, and high-quality designs.</p>
+            </div>
+            <div class="service-box">
+                <img src="image/ccc.jpg" alt="Web Design">
+                <h3>All other websites</h3>
+                <p>Modern, responsive, and high-quality designs.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonial-slider">
+            <div class="testimonial">
+                <p>"Fantastic service and top-notch designs!"</p>
+                <h4>- Willy Ouko</h4>
+            </div>
+            <div class="testimonial">
+                <p>"Our website traffic doubled within months!"</p>
+                <h4>- Tycoon Vincent</h4>
+            </div>
+        </div>
+        <button class="prev">‹</button>
+        <button class="next">›</button>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form action="https://formspree.io/f/xvgkonzw" method="POST" id="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" name="message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025 OurBrand. All rights reserved.</p>
+    </footer>
+     <style>
+        @media (max-width: 900px) {
+    .service-box {
+        flex: 1 1 calc(50% - 40px); /* 2 items per row */
+    }
+}
+
+@media (max-width: 600px) {
+    .service-box {
+        flex: 1 1 100%; /* 1 item per row */
+    }
+}
+       * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    display: contents;
+}
+
+
+header {
+    background: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline;
+    margin: 0 15px;
+}
+.nav-links li::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background: #ffcc00;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+.nav-links li:hover::after {
+    width: 100%;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  
+}
+.nav-links a:hover {
+    color: #ffcc00;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+    transition: transform 0.3s ease;
+}
+.menu-toggle:hover {
+    transform: scale(1.1);
+}
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #444;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 20px;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+.hero {
+    background: url("image/bac.jpg") no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+.logo:hover {
+    color: #ffcc00;
+}
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: red;
+    color: white;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.services {
+    padding: 1rem 0.5rem;
+    text-align: center;
+  
+}
+
+.service-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+}
+
+.service-box {
+    background: aliceblue;
+    padding: 1rem;
+    text-align: center;
+    max-width: 300px;
+    flex: 1 1 calc(33.333% - 40px); 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.service-box:hover {
+    transform: translateY(-10px); /* Lift the card slightly */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+.service-box:hover img {
+    transform: scale(1.05); /* Slightly zoom the image */
+}
+.service-box h3 {
+    margin-top: 15px;
+    font-size: 20px;
+    color: #333;
+}
+
+.service-box p {
+    font-size: 16px;
+    color: #666;
+}
+
+.testimonials {
+    padding: 50px 20px;
+    background: #ddd;
+    text-align: center;
+}
+
+.testimonial-slider {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    justify-content: center;
+}
+
+.testimonial {
+    width: 50%;
+    padding: 20px;
+}
+
+button {
+    padding: 10px;
+    background: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.contact {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact form {
+    max-width: 500px;
+    margin: auto;
+}
+
+.contact input{
+    border-radius: 8px;
+}
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd0d0;
+}
+h2:hover, h3:hover{
+    color: #ffcc00;
+    transition: 0.3s ease;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+ 
+     </style>
+    <script src="script.js">
+        document.addEventListener("DOMContentLoaded", function() {
+    const testimonials = document.querySelectorAll(".testimonial");
+    let index = 0;
+
+    function showTestimonial(i) {
+        testimonials.forEach((t, idx) => {
+            t.style.display = idx === i ? "block" : "none";
+        });
+    }
+
+    document.querySelector(".prev").addEventListener("click", () => {
+        index = (index === 0) ? testimonials.length - 1 : index - 1;
+        showTestimonial(index);
+    });
+
+    document.querySelector(".next").addEventListener("click", () => {
+        index = (index === testimonials.length - 1) ? 0 : index + 1;
+        showTestimonial(index);
+    });
+
+    showTestimonial(index);
+});
+
+    </script>
+</body>
+</html>
